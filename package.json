@@ -1,7 +1,7 @@
 {
   "name": "lisp-array-to-js",
   "description": "Transpiles lisp code represented as array to JS code",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Malte-Maurice Dreyer <dreyer.maltem@gmail.com>",
   "bin": "./cli.js",
   "bugs": {
