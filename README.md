@@ -10,6 +10,67 @@ or, to install it globally:
 $ npm install -g lisp-json-to-js
 ```
 
+## Usage
+
+### io.js / node.js
+```js
+var lispJsonToJs = require("lisp-json-to-js");
+
+console.log(lispJsonToJs(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
+console.log();
+console.log(lispJsonToJs.transpile(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
+console.log();
+console.log(lispJsonToJs.exec(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
+```
+should output:
+```js
+(function(env) {
+    return (function() {
+        env["console"] = console;
+        return env["console"]["log"](42);
+    })();
+})(Object.create(null));
+
+(function() {
+    env["console"] = console;
+    return env["console"]["log"](42);
+})()
+
+42
+undefined
+```
+
+### global
+Assuming the file test.json with the following content:
+```json
+["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]
+```
+```bash
+lisp-json-to-js test.json
+lisp-json-to-js -o test.js test.json
+lisp-json-to-js -e test.json
+```
+should output:
+```js
+(function(env) {
+    return (function() {
+        env["console"] = console;
+        return env["console"]["log"](42);
+    })();
+})(Object.create(null));
+
+42
+```
+and should write into test.js:
+```js
+(function(env) {
+    return (function() {
+        env["console"] = console;
+        return env["console"]["log"](42);
+    })();
+})(Object.create(null));
+```
+
 ## Functions
 ### `.-`
 Gets or sets a property.
