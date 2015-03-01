@@ -1,6 +1,6 @@
 {
   "name": "lisp-array-to-js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "lisp-array-to-js",
   "main": "lisp-array-to-js.js",
   "scripts": {
