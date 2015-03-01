@@ -222,3 +222,15 @@ try {
     })(Object.create(env))
 }
 ```
+
+### `with`
+With _replaces_ the current scope.
+```json
+["with", ["js", "window"], [".", "document", ["`", "querySelector"], ["`", "head"]]]
+```
+compiles to:
+```js
+(function(env) {
+    return env["document"]["querySelector"]("head");
+})(window)
+```
