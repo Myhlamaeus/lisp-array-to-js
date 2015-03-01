@@ -171,6 +171,30 @@ compiles to:
     : "isFalse")
 ```
 
+### `import`
+Imports a module.
+```json
+["import", ["`", "lisp-array-to-js"]]
+```
+compiles to:
+```js
+require("lisp-array-to-js")
+```
+Note: this currently only supports CommonJS
+
+### `export`
+Exports a module.
+```json
+["export", ["`", "test"]]
+["export", ["`", "exec"], ["`", "whatever"]]
+```
+compiles to:
+```js
+module.exports = "test"
+module.exports["exec"] = "whatever"
+```
+Note: this currently only supports CommonJS
+
 ### `js`
 Executes javascript code.
 ```json
