@@ -195,6 +195,17 @@ compiles to:
 })(Object.create(env))
 ```
 
+### `<`, `+`, `-`, `*`, `/`, `%`
+All of these are simply converted to infix notation.
+For example, `<`:
+```json
+["<", 1, 2]
+```
+compiles to:
+```js
+1 < 2
+```
+
 ### `try` and `catch`
 A try/catch block. Note that the second argument must be a call to catch.
 ```json
