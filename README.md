@@ -1,6 +1,15 @@
 # lisp-json-to-js
 > Transpiles lisp code represented as object to JS-code
 
+## Install
+```
+$ npm install --save lisp-json-to-js
+```
+or, to install it globally:
+```
+$ npm install -g lisp-json-to-js
+```
+
 ## Functions
 ### `.-`
 Gets or sets a property.
