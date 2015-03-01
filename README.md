@@ -1,26 +1,26 @@
-# lisp-json-to-js
-> Transpiles lisp code represented as object to JS-code
+# lisp-array-to-js
+> Transpiles lisp code represented as array to JS code
 
 ## Install
 ```
-$ npm install --save lisp-json-to-js
+$ npm install --save lisp-array-to-js
 ```
 or, to install it globally:
 ```
-$ npm install -g lisp-json-to-js
+$ npm install -g lisp-array-to-js
 ```
 
 ## Usage
 
 ### io.js / node.js
 ```js
-var lispJsonToJs = require("lisp-json-to-js");
+var lispArrayToJs = require("lisp-array-to-js");
 
-console.log(lispJsonToJs(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
+console.log(lispArrayToJs(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
 console.log();
-console.log(lispJsonToJs.transpile(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
+console.log(lispArrayToJs.transpile(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
 console.log();
-console.log(lispJsonToJs.exec(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
+console.log(lispArrayToJs.exec(["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]));
 ```
 should output:
 ```js
@@ -46,9 +46,9 @@ Assuming the file test.json with the following content:
 ["do", ["def", "console", ["js", "console"]], [".", "console", ["`", "log"], 42]]
 ```
 ```bash
-lisp-json-to-js test.json
-lisp-json-to-js -o test.js test.json
-lisp-json-to-js -e test.json
+lisp-array-to-js test.json
+lisp-array-to-js -o test.js test.json
+lisp-array-to-js -e test.json
 ```
 should output:
 ```js

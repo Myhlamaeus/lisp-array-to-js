@@ -1,8 +1,8 @@
 {
-  "name": "lisp-json-to-js",
-  "main": "lisp-json-to-js.js",
+  "name": "lisp-array-to-js",
+  "main": "lisp-array-to-js.js",
   "version": "0.0.0",
-  "homepage": "https://github.com/ileri/lisp-json-to-js",
+  "homepage": "https://github.com/ileri/lisp-array-to-js",
   "authors": [
     "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>"
   ],

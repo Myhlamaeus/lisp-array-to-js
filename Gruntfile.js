@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     // Define the configuration for all the tasks
     grunt.initConfig({
         config: {
-            main: "lisp-json-to-js",
+            main: "lisp-array-to-js",
             dist: "dist"
         },
         watch: {
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     browserifyOptions: {
-                        standalone: "lispJsonToJs"
+                        standalone: "lispArrayToJs"
                     }
                 },
                 files: {

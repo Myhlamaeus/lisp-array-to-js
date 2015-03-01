@@ -2,7 +2,7 @@
 /* jshint node: true */
 
 var cli = require("cli"),
-    lispJsonToJs = require("./"),
+    lispArrayToJs = require("./"),
     fs = require("fs");
 
 cli.parse({
@@ -25,9 +25,9 @@ cli.main(function(args, options) {
 
         content = JSON.parse(String(content));
         if(options.exec) {
-            out = JSON.stringify(lispJsonToJs.exec(content));
+            out = JSON.stringify(lispArrayToJs.exec(content));
         } else {
-            out = lispJsonToJs(content);
+            out = lispArrayToJs(content);
         }
 
         if(options.output) {
