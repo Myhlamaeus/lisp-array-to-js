@@ -1,7 +1,7 @@
 {
   "name": "lisp-array-to-js",
   "version": "0.2.0",
-  "description": "lisp-array-to-js",
+  "description": "Transpiles lisp code represented as array to JS code",
   "main": "lisp-array-to-js.js",
   "scripts": {
     "test": "grunt test"
