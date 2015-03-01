@@ -1,21 +1,15 @@
 {
   "name": "lisp-array-to-js",
-  "version": "0.2.1",
   "description": "Transpiles lisp code represented as array to JS code",
-  "main": "lisp-array-to-js.js",
-  "scripts": {
-    "test": "grunt test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ileri/lisp-array-to-js.git"
-  },
+  "version": "0.2.1",
   "author": "Malte-Maurice Dreyer <dreyer.maltem@gmail.com>",
-  "license": "GPL-3.0",
+  "bin": "./cli.js",
   "bugs": {
     "url": "https://github.com/ileri/lisp-array-to-js/issues"
   },
-  "homepage": "https://github.com/ileri/lisp-array-to-js",
+  "dependencies": {
+    "cli": "^0.6.5"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.4.0",
@@ -27,8 +21,14 @@
     "mocha": "^2.1.0",
     "time-grunt": "^1.0.0"
   },
-  "dependencies": {
-    "cli": "^0.6.5"
+  "homepage": "https://github.com/ileri/lisp-array-to-js",
+  "license": "GPL-3.0",
+  "main": "lisp-array-to-js.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ileri/lisp-array-to-js.git"
   },
-  "bin": "./cli.js"
+  "scripts": {
+    "test": "grunt test"
+  }
 }
