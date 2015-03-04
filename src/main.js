@@ -2,7 +2,7 @@
 /* global ace */
 
 (function(document) {
-    var lispToArray = require("lisp-array-to-js"),
+    var lispArrayToJs = require("lisp-array-to-js"),
         form = document.querySelector("form[name=\"lisp-array-to-js\"]"),
         inp = ace.edit(form.querySelector("[name=\"input\"]")),
         out = ace.edit(form.querySelector("[name=\"output\"]")),
@@ -12,7 +12,7 @@
         var content;
 
         try {
-            content = lispToArray(JSON.parse(inp.getValue()));
+            content = lispArrayToJs(JSON.parse(inp.getValue()));
         } catch(e) {
             err.textContent = e.toString();
         }
