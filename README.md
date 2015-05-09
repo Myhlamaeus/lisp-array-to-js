@@ -1,4 +1,4 @@
-# lisp-array-to-js
+# lisp-array-to-js [![Code Climate](https://codeclimate.com/github/ileri/lisp-array-to-js/badges/gpa.svg)](https://codeclimate.com/github/ileri/lisp-array-to-js) [![Build Status](https://travis-ci.org/ileri/lisp-array-to-js.svg)](https://travis-ci.org/ileri/lisp-array-to-js) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 > Transpiles lisp code represented as array to JS code
 
 ## Install
