@@ -3,7 +3,7 @@
   "description": "Transpiles lisp code represented as array to JS code",
   "version": "0.3.0",
   "author": "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>",
-  "bin": "./cli.js",
+  "bin": "dist/cli.js",
   "bugs": {
     "url": "https://github.com/ileri/lisp-array-to-js/issues"
   },
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ileri/lisp-array-to-js",
   "license": "MIT",
-  "main": "lisp-array-to-js.js",
+  "main": "dist/lisp-array-to-js.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ileri/lisp-array-to-js.git"

@@ -6,7 +6,7 @@ var main = path.basename(require('./package.json').main)
 require('babel/register')
 
 gulp.task('build', function () {
-  return gulp.src('{' + main + ',lib/**/*.js}')
+  return gulp.src('{' + main + ',cli.js,lib/**/*.js}')
     .pipe(sourcemaps.init())
       .pipe(babel())
     .pipe(sourcemaps.write('../maps'))
