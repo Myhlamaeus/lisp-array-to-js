@@ -1,16 +1,17 @@
-/* jshint node: true */
+import stmts from './lib/tools/stmts'
+import iife from './lib/tools/iife'
+import transpile from './lib/transpile'
 
-var stmts = require("./lib/tools/stmts"),
-    iife = require("./lib/tools/iife"),
-    transpile = require("./lib/transpile");
-
-function transpileProgram(val) {
-    return stmts([iife([transpile(val)], ["env"], ["Object.create(null)"])]);
+function transpileProgram (val) {
+  return stmts([iife([transpile(val)], ['env'], ['Object.create(null)'])])
 }
 
-module.exports = transpileProgram;
-transpileProgram.transpile = transpile;
-transpileProgram.exec = function(arr) {
-    /* jshint evil: true */
-    return eval(this(arr));
-};
+export default transpileProgram
+
+export {default as transpile} from './lib/transpile'
+
+export function exec (arr) {
+  /*eslint-disable no-eval */
+  return eval(this(arr))
+  /*eslint-enable no-eval */
+}
