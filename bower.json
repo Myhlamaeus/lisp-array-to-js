@@ -7,9 +7,7 @@
     "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>"
   ],
   "moduleType": [
-    "amd",
-    "globals",
-    "node"
+    "es6"
   ],
   "license": "MIT",
   "ignore": [
