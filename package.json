@@ -17,7 +17,7 @@
     "gulp-sourcemaps": "^1.5.2"
   },
   "homepage": "https://github.com/ileri/lisp-array-to-js",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "main": "lisp-array-to-js.js",
   "repository": {
     "type": "git",
